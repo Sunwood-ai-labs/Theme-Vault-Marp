@@ -1,0 +1,259 @@
+/*!
+ * Marp / Marpit Dark Red and Teal PowerPoint-style theme.
+ *
+ * @theme dark-red-teal
+ * @author maki
+ * @version https://x.com/n_seitan/status/1844283652227858637/photo/1
+ */
+
+ @use "sass:color";
+
+ $color-dark-red: #b0213c;
+ $color-teal: #348c91;
+ $color-purple: #9c5f98;
+ $color-light-gray: #b8cfd0;
+ 
+ @import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;500;700&family=Nanum+Gothic+Coding:wght@400;700&display=swap');
+ 
+ @mixin gradient-text($color1, $color2) {
+   background: linear-gradient(45deg, $color1, $color2);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   background-clip: text;
+   text-fill-color: transparent;
+ }
+ 
+ @mixin soft-shadow {
+   box-shadow: 0 4px 6px rgba($color-dark-red, 0.1);
+ }
+ 
+ section {
+   font-family: 'Kaisei Decol', serif;
+   font-weight: 400;
+   font-size: 28px;
+   line-height: 1.5;
+   padding: 40px;
+   width: 1280px;
+   height: 720px;
+   background: linear-gradient(135deg, $color-light-gray, color.adjust($color-light-gray, $lightness: -10%));
+   color: $color-dark-red;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   overflow: hidden;
+ 
+   &::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     height: 5px;
+     background: linear-gradient(90deg, $color-teal, $color-purple);
+   }
+ 
+   > * {
+     margin-left: 60px;
+     margin-right: 60px;
+   }
+ 
+   h1, h2, h3, h4, h5, h6 {
+     @include gradient-text($color-dark-red, $color-teal);
+     margin-top: 0.5em;
+     margin-bottom: 0.3em;
+     line-height: 1.2;
+   }
+ 
+   h1 {
+     font-size: 2.5em;
+     @include soft-shadow;
+   }
+ 
+   h2 { font-size: 2em; }
+   h3 { font-size: 1.7em; }
+   h4 { font-size: 1.4em; }
+   h5 { font-size: 1.2em; }
+   h6 { font-size: 1em; }
+ 
+   p {
+     margin: 0.5em 0;
+   }
+ 
+   ul, ol {
+     margin: 0.5em 0;
+     padding-left: 1.5em;
+   }
+ 
+   li {
+     margin: 0.3em 0;
+   }
+ 
+   a {
+     color: $color-teal;
+     text-decoration: none;
+     border-bottom: 2px solid $color-purple;
+     transition: all 0.3s ease;
+ 
+     &:hover {
+       background-color: rgba($color-purple, 0.2);
+     }
+   }
+ 
+   code,
+   code * {
+     font-family: 'Nanum Gothic Coding', monospace;
+     background: rgba($color-dark-red, 0.1);
+     color: $color-dark-red;
+     padding: 0.2em 0.4em;
+     border-radius: 4px;
+     font-size: 0.9em;
+   }
+ 
+   pre {
+     background: linear-gradient(45deg, color.adjust($color-light-gray, $lightness: -5%), color.adjust($color-teal, $lightness: 30%));
+     border-radius: 8px;
+     padding: 1em;
+     @include soft-shadow;
+ 
+     code,
+     code * {
+       font-family: 'Nanum Gothic Coding', monospace;
+       background: none;
+       color: $color-dark-red;
+       padding: 0;
+     }
+   }
+ 
+   blockquote {
+     margin: 1em 0;
+     padding: 0.5em 1em;
+     border-left: 5px solid $color-teal;
+     background: linear-gradient(90deg, rgba($color-teal, 0.2), rgba($color-purple, 0.2));
+     font-style: italic;
+     @include soft-shadow;
+   }
+ 
+   table {
+     width: 100%;
+     border-collapse: separate;
+     border-spacing: 0;
+     margin: 1em 0;
+     @include soft-shadow;
+ 
+     th, td {
+       padding: 0.5em 1em;
+       border: 1px solid rgba($color-dark-red, 0.2);
+     }
+ 
+     th {
+       background: linear-gradient(45deg, $color-teal, $color-purple);
+       color: $color-light-gray;
+       font-weight: bold;
+     }
+ 
+     tr:nth-child(even) {
+       background-color: rgba($color-light-gray, 0.3);
+     }
+ 
+     tr:hover {
+       background-color: rgba($color-teal, 0.2);
+     }
+   }
+ 
+   &.lead {
+     text-align: center;
+     justify-content: center;
+     align-items: center;
+ 
+     h1 {
+       font-size: 3.5em;
+       margin-bottom: 0.5em;
+     }
+ 
+     p {
+       font-size: 1.5em;
+       max-width: 80%;
+       margin: 0.5em auto;
+     }
+   }
+ 
+   &.invert {
+     background: linear-gradient(135deg, color.adjust($color-dark-red, $lightness: -10%), $color-dark-red);
+     color: $color-light-gray;
+ 
+     h1, h2, h3, h4, h5, h6 {
+       @include gradient-text($color-light-gray, $color-teal);
+     }
+ 
+     a {
+       color: $color-teal;
+       border-bottom-color: $color-purple;
+ 
+       &:hover {
+         background-color: rgba($color-purple, 0.2);
+       }
+     }
+ 
+     code,
+     code * {
+       background: rgba($color-light-gray, 0.2);
+       color: $color-light-gray;
+     }
+ 
+     pre {
+       background: linear-gradient(45deg, color.adjust($color-dark-red, $lightness: 10%), color.adjust($color-dark-red, $lightness: 15%));
+ 
+       code,
+       code * {
+         color: $color-light-gray;
+       }
+     }
+ 
+     blockquote {
+       border-left-color: $color-teal;
+       background: linear-gradient(90deg, rgba($color-teal, 0.1), rgba($color-purple, 0.1));
+     }
+ 
+     table {
+       th {
+         background: linear-gradient(45deg, color.adjust($color-teal, $lightness: -20%), color.adjust($color-purple, $lightness: -20%));
+         color: $color-light-gray;
+       }
+ 
+       tr:nth-child(even) {
+         background-color: rgba($color-dark-red, 0.3);
+       }
+ 
+       tr:hover {
+         background-color: rgba($color-teal, 0.1);
+       }
+     }
+   }
+ }
+ 
+ header,
+ footer {
+   position: absolute;
+   left: 0;
+   right: 0;
+   color: $color-dark-red;
+   padding: 0 60px;
+   font-size: 0.8em;
+ }
+ 
+ header {
+   top: 0;
+ }
+ 
+ footer {
+   bottom: 0;
+ }
+ 
+ section::after {
+   content: attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
+   position: absolute;
+   right: 30px;
+   bottom: 30px;
+   font-size: 0.8em;
+   color: rgba($color-dark-red, 0.5);
+ }
