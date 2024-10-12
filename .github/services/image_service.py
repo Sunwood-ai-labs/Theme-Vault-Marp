@@ -341,10 +341,10 @@ if __name__ == "__main__":
     
     try:
         # 従来の手法でヘッダー画像を生成（自動色選択）
-        # image_service.generate_header_image(tag, os.path.join(output_dir, "traditional_header_auto_color.png"), font_name, use_smooth_area=False, target_ratio=0.5)
+        image_service.generate_header_image(tag, os.path.join(output_dir, "traditional_header_auto_color.png"), font_name, use_smooth_area=False, target_ratio=0.5)
         
         # 新しい余白検出手法でヘッダー画像を生成（自動色選択）
-        image_service.generate_header_image(tag, os.path.join(output_dir, "smooth_area_header_auto_color.png"), font_name, use_smooth_area=True, target_ratio=0.8)
+        # image_service.generate_header_image(tag, os.path.join(output_dir, "smooth_area_header_auto_color.png"), font_name, use_smooth_area=True, target_ratio=0.8)
         
         # 色を指定してヘッダー画像を生成
         # image_service.generate_header_image(tag, os.path.join(output_dir, "custom_color_header.png"), font_name, use_smooth_area=True, target_ratio=0.8, text_color=(255, 0, 0))
