@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Sunwood-ai-labs/Theme-Vault-Marp/refs/heads/main/docs/HarmonAI-III.png" width="100%">
+  <img src="https://raw.githubusercontent.com/Sunwood-ai-labs/Theme-Vault-Marp/refs/heads/main/docs/Theme-Vault-Marp.png" width="100%">
   <h1 align="center">🌟Theme-Vault-Marp 🌟</h1>
 </p>
 
@@ -89,25 +89,25 @@
 
 ## 🚀 Project Overview
 
-Theme-Vault-Marp is a repository providing a comprehensive collection of themes and management tools for Marp presentations.  It aggregates themes with diverse designs, offering users an easy-to-use environment for utilizing, customizing, and sharing them. Version: `v1.0.0`
+Theme-Vault-Marp is a repository providing a comprehensive collection of themes and management tools for Marp presentations. It aggregates themes with diverse designs, providing users with an easy-to-use, customizable, and shareable environment. Version: `v1.0.0`
 
 ## 🆕 Latest News
 
-- 🎉 v1.0.0 Release: Added initial theme collection, implemented theme management scripts, and created documentation.
+- 🎉 v1.0.0 Release: Added initial theme collection (including the `neko-kaisei-beige` theme), implemented theme management scripts, and created documentation.
 
 ## ✨ Main Features
 
-1. **Diverse Theme Collection:** Provides themes suitable for various purposes, including business, academia, and creative fields.
-2. **Easy Theme Application:** Apply themes simply by adding one line to your Marp Markdown file.
-3. **Customization Support:** Create your own styles by editing the CSS files for each theme.
-4. **Theme Management Tools:** Provides scripts for easy addition, update, and deletion of themes.
-5. **Sample Presentations:** Includes sample slides showing examples of each theme's usage.
-6. **Community Contribution:**  A system that allows users to easily share and integrate their created themes.
+1. Diverse Theme Collection: Provides themes suitable for various purposes, including business, academic, and creative uses (currently only the `neko-kaisei-beige` theme is available).
+2. Easy Theme Application: Apply themes simply by adding one line to your Marp markdown file.
+3. Customization Support: Create your own styles by editing the CSS files of each theme.
+4. Theme Management Tool: Provides functions for adding, updating, and deleting themes using Python scripts.
+5. Sample Presentation: Includes sample slides demonstrating the use of the `neko-kaisei-beige` theme.
+
 
 ## 🔧 How to Use
 
 ### Applying a Theme:
-Add the following lines to the top of your Marp Markdown file:
+Add the following line to the beginning of your Marp markdown file:
 
 ```markdown
 ---
@@ -130,6 +130,7 @@ theme: neko-kaisei-beige
 2. Edit the CSS to customize the style.
 3. Save the changes and preview them in Marp.
 
+
 ## 📦 Installation Instructions
 
 1. Clone this repository:
@@ -140,12 +141,12 @@ theme: neko-kaisei-beige
    ```bash
    cd Theme-Vault-Marp
    ```
-3. Install necessary dependencies (if any):
+3. Install the necessary dependencies:
    ```bash
    pip install -r requirements.txt
    ```
 
-## 🌿 Environment Setup
+## 🌿 Setting up the Environment
 
 To set up the environment for using Theme-Vault-Marp:
 
@@ -156,25 +157,22 @@ To set up the environment for using Theme-Vault-Marp:
 2. Install your preferred Markdown editor (VSCode recommended).
 3. If using VSCode, install the [Marp for VS Code](https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode) extension.
 
-These steps will prepare your environment to create Marp presentations using Theme-Vault-Marp themes.
-
-## 📚 Major Components
+## 📚 Main Components
 
 ### 🎨 Theme Collection
 - Stores the CSS files and sample Markdown files for each theme in the `theme/` directory.
-- Currently included themes:
-  - neko-kaisei-beige
-  - (More to be added)
+- Currently included theme: `neko-kaisei-beige`
 
-### 🛠 Theme Management Scripts
+### 🛠 Theme Management Script
 - Stores Python scripts for adding, updating, and deleting themes in the `scripts/` directory.
 
 ### 📘 Documentation
-- Contains detailed usage instructions, customization guides, and contribution guidelines in the `docs/` directory.
+- `README.md` contains instructions on usage, customization guides, and contribution methods.
+
 
 ## 🤝 Contributions
 
-Theme-Vault-Marp welcomes contributions from the community.  We look forward to contributions of all kinds, such as adding new themes, improving existing themes, and expanding the documentation.
+Theme-Vault-Marp welcomes contributions from the community. We look forward to contributions of all kinds, such as adding new themes, improving existing themes, and expanding the documentation.
 
 1. Fork this repository.
 2. Create a new feature branch (`git checkout -b feature/AmazingTheme`)
@@ -186,10 +184,10 @@ Theme-Vault-Marp welcomes contributions from the community.  We look forward to 
 
 Theme-Vault-Marp is released under the [MIT License](LICENSE).
 
-## 🙏 Acknowledgments
+## 🙏 Acknowledgements
 
 - Thank you to the [Marp](https://marp.app/) team for providing a wonderful presentation tool.
-- Thank you to all contributors!
+- Thank you to all contributors.
 
 ---
 
