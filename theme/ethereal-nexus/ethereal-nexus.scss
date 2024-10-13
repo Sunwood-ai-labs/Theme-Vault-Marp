@@ -1,0 +1,255 @@
+/*!
+ * Marp / Marpit Ethereal Theme
+ *
+ * @theme ethereal-nexus
+ * @author Assistant
+ */
+
+ @use "sass:color";
+
+ $color-mauve: #BFA3AD;
+ $color-lavender: #8C798C;
+ $color-dark: #1E1C26;
+ $color-slate: #535B73;
+ $color-cream: #F2E4D8;
+ 
+ @import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;500;700&display=swap');
+ 
+ @mixin gradient-text($color1, $color2) {
+   background: linear-gradient(45deg, $color1, $color2);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   background-clip: text;
+   text-fill-color: transparent;
+ }
+ 
+ @mixin soft-shadow {
+   box-shadow: 0 4px 6px rgba($color-dark, 0.1);
+ }
+ 
+ section {
+   font-family: 'Kaisei Decol', serif;
+   font-weight: 400;
+   font-size: 28px;
+   line-height: 1.5;
+   padding: 40px;
+   width: 1280px;
+   height: 720px;
+   background: linear-gradient(135deg, $color-cream, color.adjust($color-mauve, $lightness: 10%));
+   color: $color-dark;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   overflow: hidden;
+ 
+   &::after {
+     content: attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
+     position: absolute;
+     right: 30px;
+     bottom: 30px;
+     font-size: 0.8em;
+     color: rgba($color-dark, 0.5);
+   }
+ 
+   > * {
+     margin-left: 60px;
+     margin-right: 60px;
+   }
+ 
+   h1, h2, h3, h4, h5, h6 {
+     @include gradient-text($color-slate, $color-lavender);
+     margin-top: 0.5em;
+     margin-bottom: 0.3em;
+     line-height: 1.2;
+   }
+ 
+   h1 {
+     font-size: 2.5em;
+     @include soft-shadow;
+   }
+ 
+   h2 { font-size: 2em; }
+   h3 { font-size: 1.7em; }
+   h4 { font-size: 1.4em; }
+   h5 { font-size: 1.2em; }
+   h6 { font-size: 1em; }
+ 
+   p {
+     margin: 0.5em 0;
+   }
+ 
+   ul, ol {
+     margin: 0.5em 0;
+     padding-left: 1.5em;
+   }
+ 
+   li {
+     margin: 0.3em 0;
+   }
+ 
+   a {
+     color: $color-slate;
+     text-decoration: none;
+     border-bottom: 2px solid $color-lavender;
+     transition: all 0.3s ease;
+ 
+     &:hover {
+       background-color: rgba($color-lavender, 0.2);
+     }
+   }
+ 
+   code {
+     font-family: 'Courier New', Courier, monospace;
+     background: rgba($color-mauve, 0.2);
+     color: $color-dark;
+     padding: 0.2em 0.4em;
+     border-radius: 4px;
+     font-size: 0.9em;
+   }
+ 
+   pre {
+     background: linear-gradient(45deg, color.adjust($color-cream, $lightness: -5%), color.adjust($color-mauve, $lightness: 5%));
+     border-radius: 8px;
+     padding: 1em;
+     @include soft-shadow;
+ 
+     code {
+       background: none;
+       color: $color-dark;
+       padding: 0;
+     }
+   }
+ 
+   blockquote {
+     margin: 1em 0;
+     padding: 0.5em 1em;
+     border-left: 5px solid $color-lavender;
+     background: linear-gradient(90deg, rgba($color-mauve, 0.2), rgba($color-lavender, 0.2));
+     font-style: italic;
+     @include soft-shadow;
+   }
+ 
+   table {
+     width: 100%;
+     border-collapse: separate;
+     border-spacing: 0;
+     margin: 1em 0;
+     @include soft-shadow;
+ 
+     th, td {
+       padding: 0.5em 1em;
+       border: 1px solid rgba($color-dark, 0.2);
+     }
+ 
+     th {
+       background: linear-gradient(45deg, $color-slate, $color-lavender);
+       color: $color-cream;
+       font-weight: bold;
+     }
+ 
+     tr:nth-child(even) {
+       background-color: rgba($color-cream, 0.3);
+     }
+ 
+     tr:hover {
+       background-color: rgba($color-mauve, 0.2);
+     }
+   }
+ 
+   &.lead {
+     text-align: center;
+     justify-content: center;
+     align-items: center;
+ 
+     h1 {
+       font-size: 3.5em;
+       margin-bottom: 0.5em;
+     }
+ 
+     p {
+       font-size: 1.5em;
+       max-width: 80%;
+       margin: 0.5em auto;
+     }
+   }
+ }
+ 
+ header,
+ footer {
+   position: absolute;
+   left: 0;
+   right: 0;
+   color: $color-dark;
+   padding: 10px 60px;
+   font-size: 0.8em;
+ }
+ 
+ header {
+   top: 0;
+   font-weight: bold;
+ }
+ 
+ footer {
+   bottom: 0;
+ }
+ 
+ // Inverted theme
+ section.invert {
+   background: linear-gradient(135deg, $color-dark, color.adjust($color-slate, $lightness: -10%));
+   color: $color-cream;
+ 
+   h1, h2, h3, h4, h5, h6 {
+     @include gradient-text($color-cream, $color-mauve);
+   }
+ 
+   a {
+     color: $color-mauve;
+     border-bottom-color: $color-lavender;
+ 
+     &:hover {
+       background-color: rgba($color-lavender, 0.2);
+     }
+   }
+ 
+   code {
+     background: rgba($color-mauve, 0.3);
+     color: $color-cream;
+   }
+ 
+   pre {
+     background: linear-gradient(45deg, color.adjust($color-dark, $lightness: 10%), color.adjust($color-slate, $lightness: 10%));
+ 
+     code {
+       color: $color-cream;
+     }
+   }
+ 
+   blockquote {
+     border-left-color: $color-mauve;
+     background: linear-gradient(90deg, rgba($color-mauve, 0.1), rgba($color-lavender, 0.1));
+   }
+ 
+   table {
+     th {
+       background: linear-gradient(45deg, color.adjust($color-slate, $lightness: -20%), color.adjust($color-lavender, $lightness: -20%));
+       color: $color-cream;
+     }
+ 
+     tr:nth-child(even) {
+       background-color: rgba($color-dark, 0.3);
+     }
+ 
+     tr:hover {
+       background-color: rgba($color-mauve, 0.1);
+     }
+   }
+ 
+   header,
+   footer {
+     color: $color-cream;
+   }
+ 
+   header {
+     border-bottom-color: $color-mauve;
+   }
+ }
