@@ -1,6 +1,6 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/Sunwood-ai-labs/Theme-Vault-Marp/refs/heads/main/docs/Theme-Vault-Marp.png" width="100%">
-  <h1 align="center">🌟Theme-Vault-Marp 🌟</h1>
+  <h1 align="center">🌟Theme-Vault-Marp🌟</h1>
 </p>
 
 <p align="center">
@@ -89,19 +89,19 @@
 
 ## 🚀 プロジェクト概要
 
-Theme-Vault-Marpは、Marpプレゼンテーション用の包括的なテーマコレクションと管理ツールを提供するリポジトリです。多様なデザインのテーマを集約し、ユーザーが簡単に利用、カスタマイズ、そして共有できる環境を提供します。バージョン: `v1.1.0`
+Theme-Vault-Marpは、Marpプレゼンテーション用の包括的なテーマコレクションと管理ツールを提供するリポジトリです。多様なデザインのテーマを集約し、ユーザーが簡単に利用、カスタマイズ、そして共有できる環境を提供します。バージョン: `v1.2.0`
 
 ## 🆕 最新情報
 
-- 🎉 v1.1.0リリース: ミントグリーンとダークレッド＆ティールテーマを追加。GaiaベーステーマのSass実装とCSS実装を改善。いくつかのバグ修正とドキュメントの更新を行いました。
+- 🎉 v1.2.0リリース: 新しいMarpテーマ「Ethereal Nexus」と「dark-red-teal」を追加しました。猫カフェをテーマにした新しいサンプルプレゼンテーションも追加しました。READMEファイルと英語READMEを更新しました。
 
 
 ## ✨ 主な機能
 
-1. 多様なテーマコレクション：ビジネス、学術、クリエイティブなど、様々な用途に適したテーマを提供（`neko-kaisei-beige`, `mint-green`, `dark-red-teal`, `gaia_base`）
+1. 多様なテーマコレクション：ビジネス、学術、クリエイティブなど、様々な用途に適したテーマを提供（`neko-kaisei-beige`, `mint-green`, `dark-red-teal`, `gaia_base`, `ethereal-nexus`）
 2. 簡単なテーマ適用：Marpマークダウンファイルに1行追加するだけでテーマを適用可能
 3. カスタマイズ支援：各テーマのCSSファイルを編集して、独自のスタイルを作成可能
-4. Sass実装：`mint-green`と`dark-red-teal`テーマはSassで実装され、保守性と可読性が向上
+4. Sass実装：一部テーマはSassで実装され、保守性と可読性が向上
 5. サンプルプレゼンテーション：各テーマの使用例を示すサンプルスライドを同梱
 
 
@@ -162,7 +162,7 @@ Theme-Vault-Marpを使用するための環境を構築するには：
 
 ### 🎨 テーマコレクション
 - `theme/`ディレクトリ内に各テーマのCSSファイル、Sassファイル、とサンプルMarkdownファイルを格納
-- 現在含まれるテーマ：`neko-kaisei-beige`, `mint-green`, `dark-red-teal`, `gaia_base`
+- 現在含まれるテーマ：`neko-kaisei-beige`, `mint-green`, `dark-red-teal`, `gaia_base`, `ethereal-nexus`
 
 ### [Dark red teal](https://github.com/Sunwood-ai-labs/Theme-Vault-Marp/tree/main/theme/dark-red-teal)
 
