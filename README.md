@@ -164,12 +164,15 @@ Theme-Vault-Marpを使用するための環境を構築するには：
 - `theme/`ディレクトリ内に各テーマのCSSファイル、Sassファイル、とサンプルMarkdownファイルを格納
 - 現在含まれるテーマ：`neko-kaisei-beige`, `mint-green`, `dark-red-teal`, `gaia_base`
 
-### 🛠 テーマ管理スクリプト
-- スクリプトは存在しません。🔴
+### [Dark red teal](https://github.com/Sunwood-ai-labs/Theme-Vault-Marp/tree/main/theme/dark-red-teal)
+
+![](https://raw.githubusercontent.com/Sunwood-ai-labs/Theme-Vault-Marp/refs/heads/main/theme/dark-red-teal/dark-red-teal.png)
+
+### [Ethereal Nexus](https://github.com/Sunwood-ai-labs/Theme-Vault-Marp/tree/main/theme/ethereal-nexus)
+
+![](https://raw.githubusercontent.com/Sunwood-ai-labs/Theme-Vault-Marp/refs/heads/main/theme/ethereal-nexus/ethereal-nexus.png)
 
 
-### 📘 ドキュメント
-- `README.md`に使用方法、カスタマイズガイド、貢献方法などを記載
 
 
 ## 🤝 コントリビューション
