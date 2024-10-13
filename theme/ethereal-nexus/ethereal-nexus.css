@@ -1,0 +1,216 @@
+/*!
+ * Marp / Marpit Ethereal Theme
+ *
+ * @theme ethereal-nexus
+ * @author Assistant
+ */
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;500;700&display=swap");
+section {
+  font-family: "Kaisei Decol", serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.5;
+  padding: 40px;
+  width: 1280px;
+  height: 720px;
+  background: linear-gradient(135deg, #F2E4D8, rgb(211.9230769231, 193.0769230769, 199.8076923077));
+  color: #1E1C26;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+section::after {
+  content: attr(data-marpit-pagination) " / " attr(data-marpit-pagination-total);
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  font-size: 0.8em;
+  color: rgba(30, 28, 38, 0.5);
+}
+section > * {
+  margin-left: 60px;
+  margin-right: 60px;
+}
+section h1, section h2, section h3, section h4, section h5, section h6 {
+  background: linear-gradient(45deg, #535B73, #8C798C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  margin-top: 0.5em;
+  margin-bottom: 0.3em;
+  line-height: 1.2;
+}
+section h1 {
+  font-size: 2.5em;
+  box-shadow: 0 4px 6px rgba(30, 28, 38, 0.1);
+}
+section h2 {
+  font-size: 2em;
+}
+section h3 {
+  font-size: 1.7em;
+}
+section h4 {
+  font-size: 1.4em;
+}
+section h5 {
+  font-size: 1.2em;
+}
+section h6 {
+  font-size: 1em;
+}
+section p {
+  margin: 0.5em 0;
+}
+section ul, section ol {
+  margin: 0.5em 0;
+  padding-left: 1.5em;
+}
+section li {
+  margin: 0.3em 0;
+}
+section a {
+  color: #535B73;
+  text-decoration: none;
+  border-bottom: 2px solid #8C798C;
+  transition: all 0.3s ease;
+}
+section a:hover {
+  background-color: rgba(140, 121, 140, 0.2);
+}
+section code {
+  font-family: "Courier New", Courier, monospace;
+  background: rgba(191, 163, 173, 0.2);
+  color: #1E1C26;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+section pre {
+  background: linear-gradient(45deg, rgb(235.625, 214.7596153846, 196.875), rgb(201.4615384615, 178.0384615385, 186.4038461538));
+  border-radius: 8px;
+  padding: 1em;
+  box-shadow: 0 4px 6px rgba(30, 28, 38, 0.1);
+}
+section pre code {
+  background: none;
+  color: #1E1C26;
+  padding: 0;
+}
+section blockquote {
+  margin: 1em 0;
+  padding: 0.5em 1em;
+  border-left: 5px solid #8C798C;
+  background: linear-gradient(90deg, rgba(191, 163, 173, 0.2), rgba(140, 121, 140, 0.2));
+  font-style: italic;
+  box-shadow: 0 4px 6px rgba(30, 28, 38, 0.1);
+}
+section table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1em 0;
+  box-shadow: 0 4px 6px rgba(30, 28, 38, 0.1);
+}
+section table th, section table td {
+  padding: 0.5em 1em;
+  border: 1px solid rgba(30, 28, 38, 0.2);
+}
+section table th {
+  background: linear-gradient(45deg, #535B73, #8C798C);
+  color: #F2E4D8;
+  font-weight: bold;
+}
+section table tr:nth-child(even) {
+  background-color: rgba(242, 228, 216, 0.3);
+}
+section table tr:hover {
+  background-color: rgba(191, 163, 173, 0.2);
+}
+section.lead {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+section.lead h1 {
+  font-size: 3.5em;
+  margin-bottom: 0.5em;
+}
+section.lead p {
+  font-size: 1.5em;
+  max-width: 80%;
+  margin: 0.5em auto;
+}
+
+header,
+footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  color: #1E1C26;
+  padding: 10px 60px;
+  font-size: 0.8em;
+}
+
+header {
+  top: 0;
+  font-weight: bold;
+}
+
+footer {
+  bottom: 0;
+}
+
+section.invert {
+  background: linear-gradient(135deg, #1E1C26, rgb(61.6212121212, 67.5606060606, 85.3787878788));
+  color: #F2E4D8;
+}
+section.invert h1, section.invert h2, section.invert h3, section.invert h4, section.invert h5, section.invert h6 {
+  background: linear-gradient(45deg, #F2E4D8, #BFA3AD);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+section.invert a {
+  color: #BFA3AD;
+  border-bottom-color: #8C798C;
+}
+section.invert a:hover {
+  background-color: rgba(140, 121, 140, 0.2);
+}
+section.invert code {
+  background: rgba(191, 163, 173, 0.3);
+  color: #F2E4D8;
+}
+section.invert pre {
+  background: linear-gradient(45deg, rgb(53.1818181818, 49.6363636364, 67.3636363636), rgb(104.3787878788, 114.4393939394, 144.6212121212));
+}
+section.invert pre code {
+  color: #F2E4D8;
+}
+section.invert blockquote {
+  border-left-color: #BFA3AD;
+  background: linear-gradient(90deg, rgba(191, 163, 173, 0.1), rgba(140, 121, 140, 0.1));
+}
+section.invert table th {
+  background: linear-gradient(45deg, rgb(40.2424242424, 44.1212121212, 55.7575757576), rgb(85.5662650602, 73.4337349398, 85.5662650602));
+  color: #F2E4D8;
+}
+section.invert table tr:nth-child(even) {
+  background-color: rgba(30, 28, 38, 0.3);
+}
+section.invert table tr:hover {
+  background-color: rgba(191, 163, 173, 0.1);
+}
+section.invert header,
+section.invert footer {
+  color: #F2E4D8;
+}
+section.invert header {
+  border-bottom-color: #BFA3AD;
+}
+
+/*# sourceMappingURL=ethereal-nexus.css.map */
