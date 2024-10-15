@@ -182,6 +182,10 @@ Theme-Vault-Marpを使用するための環境を構築するには：
 
 ![](https://raw.githubusercontent.com/Sunwood-ai-labs/Theme-Vault-Marp/refs/heads/main/theme/ethereal-nexus/ethereal-nexus.png)
 
+### [Cybercat Dreamscape](https://github.com/Sunwood-ai-labs/Theme-Vault-Marp/tree/main/theme/cybercat-dreamscape)
+
+![](https://raw.githubusercontent.com/Sunwood-ai-labs/Theme-Vault-Marp/refs/heads/main/theme/cybercat-dreamscape/cybercat-dreamscape.png)
+
 
 
 
