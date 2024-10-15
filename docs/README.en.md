@@ -94,27 +94,27 @@ Theme-Vault-Marp is a repository providing a comprehensive collection of themes 
 ## 🆕 Latest News
 
 - Improved release header image generation script resulting in sharper generated header images.
-- Updated release notes generation settings and documentation.
+- Release note generation settings and documentation have been updated.
 
 
 ## ✨ Main Features
 
 1. Diverse Theme Collection: Offers themes suitable for various purposes, including business, academic, and creative uses (`neko-kaisei-beige`, `mint-green`, `dark-red-teal`, `gaia_base`, `ethereal-nexus`).
-2. Easy Theme Application: Apply themes simply by adding one line to your Marp Markdown file.
+2. Easy Theme Application: Apply themes by simply adding one line to your Marp Markdown file.
 3. Customization Support: Create your own styles by editing the CSS files for each theme.
 4. Sass Implementation: Some themes are implemented with Sass for improved maintainability and readability.
-5. Sample Presentations: Includes sample slides demonstrating the usage of each theme.
+5. Sample Presentations: Includes sample slides demonstrating the use of each theme.
 
 
 ## 🔧 How to Use
 
 ### Applying a Theme:
-Add the following lines to the beginning of your Marp Markdown file:
+Add the following line to the top of your Marp Markdown file:
 
 ```markdown
 ---
 marp: true
-theme: [theme name]
+theme: [Theme Name]
 ---
 ```
 
@@ -128,7 +128,7 @@ theme: neko-kaisei-beige
 ```
 
 ### Customizing a Theme:
-1. Open the `theme/[theme name]/[theme name].css` or `[theme name].scss` file.
+1. Open the `theme/[Theme Name]/[Theme Name].css` or `[Theme Name].scss` file.
 2. Edit the CSS or Sass to customize the style.
 3. Save your changes and preview them in Marp.
 
@@ -159,10 +159,10 @@ To set up the environment for using Theme-Vault-Marp:
 2. Install your preferred Markdown editor (VSCode recommended).
 3. If using VSCode, install the [Marp for VS Code](https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode) extension.
 
-## 📚 Main Components
+## 📚 Key Components
 
 ### 🎨 Theme Collection
-- Stores the CSS files, Sass files, and sample Markdown files for each theme in the `theme/` directory.
+- Stores each theme's CSS file, Sass file, and sample Markdown file in the `theme/` directory.
 - Currently included themes: `neko-kaisei-beige`, `mint-green`, `dark-red-teal`, `gaia_base`, `ethereal-nexus`
 
 
@@ -182,12 +182,16 @@ To set up the environment for using Theme-Vault-Marp:
 
 ![](https://raw.githubusercontent.com/Sunwood-ai-labs/Theme-Vault-Marp/refs/heads/main/theme/ethereal-nexus/ethereal-nexus.png)
 
+### [Cybercat Dreamscape](https://github.com/Sunwood-ai-labs/Theme-Vault-Marp/tree/main/theme/cybercat-dreamscape)
+
+![](https://raw.githubusercontent.com/Sunwood-ai-labs/Theme-Vault-Marp/refs/heads/main/theme/cybercat-dreamscape/cybercat-dreamscape.png)
+
 
 
 
 ## 🤝 Contributions
 
-Theme-Vault-Marp welcomes contributions from the community.  We encourage contributions in various forms, such as adding new themes, improving existing themes, and expanding the documentation.
+Theme-Vault-Marp welcomes contributions from the community.  We encourage contributions of all kinds, including adding new themes, improving existing themes, and expanding the documentation.
 
 1. Fork this repository.
 2. Create a new feature branch (`git checkout -b feature/AmazingTheme`)
@@ -197,7 +201,7 @@ Theme-Vault-Marp welcomes contributions from the community.  We encourage contri
 
 ## 📄 License
 
-Theme-Vault-Marp is released under the [MIT License](LICENSE).
+Theme-Vault-Marp is licensed under the [MIT License](LICENSE).
 
 ## 🙏 Acknowledgements
 
