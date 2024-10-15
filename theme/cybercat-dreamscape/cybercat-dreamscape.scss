@@ -1,0 +1,305 @@
+/*!
+ * Marp / Marpit Cybercat Dreamscape Theme
+ *
+ * @theme cybercat-dreamscape
+ * @author Assistant
+ */
+
+ @use "sass:color";
+
+ // Color palette
+ $color-burgundy: #8C3545;
+ $color-dark: #26020C;
+ $color-navy: #253C59;
+ $color-teal: #329AA6;
+ $color-sand: #F2DDB6;
+ 
+ @import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;500;700&display=swap');
+ 
+ @mixin gradient-text($color1, $color2) {
+   background: linear-gradient(45deg, $color1, $color2);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   background-clip: text;
+   text-fill-color: transparent;
+ }
+ 
+ @mixin soft-shadow {
+   box-shadow: 0 8px 30px rgba($color-dark, 0.15);
+ }
+ 
+ @keyframes fadeIn {
+   from { opacity: 0; transform: translateY(20px); }
+   to { opacity: 1; transform: translateY(0); }
+ }
+ 
+ section {
+   font-family: 'Kaisei Decol', serif;
+   font-weight: 400;
+   font-size: 28px;
+   line-height: 1.6;
+   padding: 40px;
+   width: 1280px;
+   height: 720px;
+   background: linear-gradient(135deg, $color-sand, color.adjust($color-teal, $lightness: 40%));
+   color: $color-dark;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   overflow: hidden;
+   position: relative;
+ 
+   &::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="%23329AA6" fill-opacity="0.1" width="50" height="50" x="0" y="0" /><rect fill="%23329AA6" fill-opacity="0.1" width="50" height="50" x="50" y="50" /></svg>');
+     opacity: 0.5;
+     z-index: -1;
+   }
+ 
+   &::after {
+     content: attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
+     position: absolute;
+     right: 30px;
+     bottom: 30px;
+     font-size: 0.8em;
+     color: rgba($color-navy, 0.6);
+     font-weight: 700;
+   }
+ 
+   > * {
+     margin-left: 60px;
+     margin-right: 60px;
+     animation: fadeIn 0.5s ease-out;
+   }
+ 
+   h1, h2, h3, h4, h5, h6 {
+     @include gradient-text($color-burgundy, $color-navy);
+     margin-top: 0.5em;
+     margin-bottom: 0.3em;
+     line-height: 1.2;
+   }
+ 
+   h1 {
+     font-size: 2.8em;
+     @include soft-shadow;
+     letter-spacing: -0.02em;
+     font-weight: 700;
+   }
+ 
+   h2 { font-size: 2.2em; font-weight: 700; }
+   h3 { font-size: 1.8em; font-weight: 500; }
+   h4 { font-size: 1.5em; font-weight: 500; }
+   h5 { font-size: 1.3em; font-weight: 500; }
+   h6 { font-size: 1.1em; font-weight: 500; }
+ 
+   p {
+     margin: 0.7em 0;
+     opacity: 0.9;
+   }
+ 
+   ul, ol {
+     margin: 0.7em 0;
+     padding-left: 1.5em;
+   }
+ 
+   li {
+     margin: 0.4em 0;
+   }
+ 
+   a {
+     color: $color-burgundy;
+     text-decoration: none;
+     border-bottom: 2px solid $color-teal;
+     transition: all 0.3s ease;
+     font-weight: 500;
+ 
+     &:hover {
+       background-color: rgba($color-teal, 0.2);
+       color: $color-navy;
+     }
+   }
+ 
+   code {
+     font-family: 'Kaisei Decol', serif;
+     background: rgba($color-teal, 0.2);
+     color: $color-navy;
+     padding: 0.2em 0.4em;
+     border-radius: 4px;
+     font-size: 0.9em;
+   }
+
+   code * {
+    font-family: 'Kaisei Decol', serif;
+    background: rgba($color-teal, 0.2);
+    color: $color-navy;
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+ 
+   pre {
+     background: linear-gradient(45deg, color.adjust($color-sand, $lightness: -5%), color.adjust($color-teal, $lightness: 30%));
+     border-radius: 8px;
+     padding: 1em;
+     @include soft-shadow;
+ 
+     code {
+       background: none;
+       color: $color-navy;
+       padding: 0;
+     }
+   }
+ 
+   blockquote {
+     margin: 1em 0;
+     padding: 0.5em 1em;
+     border-left: 5px solid $color-burgundy;
+     background: linear-gradient(90deg, rgba($color-teal, 0.1), rgba($color-sand, 0.1));
+     font-style: italic;
+     @include soft-shadow;
+   }
+ 
+   table {
+     width: 100%;
+     border-collapse: separate;
+     border-spacing: 0;
+     margin: 1em 0;
+     @include soft-shadow;
+ 
+     th, td {
+       padding: 0.7em 1em;
+       border: 1px solid rgba($color-navy, 0.2);
+     }
+ 
+     th {
+       background: linear-gradient(45deg, $color-burgundy, $color-navy);
+       color: $color-sand;
+       font-weight: bold;
+     }
+ 
+     tr:nth-child(even) {
+       background-color: rgba($color-sand, 0.3);
+     }
+ 
+     tr:hover {
+       background-color: rgba($color-teal, 0.2);
+     }
+   }
+ 
+   &.lead {
+     text-align: center;
+     justify-content: center;
+     align-items: center;
+     background: linear-gradient(135deg, $color-navy, $color-burgundy);
+     color: $color-sand;
+ 
+     h1 {
+       font-size: 3.8em;
+       margin-bottom: 0.3em;
+       @include gradient-text($color-sand, $color-teal);
+     }
+
+     h2, h3 {
+      @include gradient-text($color-sand, $color-teal);
+      text-shadow: 0 0 10px rgba($color-dark, 0.5); /* 読みやすさを向上させるためのテキストシャドウ */
+      font-weight: 500; /* フォントの太さを少し細く */
+      margin-top: 0.5em; /* タイトルとの間隔を調整 */
+      }
+ 
+     p {
+       font-size: 1.6em;
+       max-width: 70%;
+       margin: 0.5em auto;
+       opacity: 0.9;
+     }
+   }
+ }
+ 
+ header,
+ footer {
+   position: absolute;
+   left: 0;
+   right: 0;
+   color: $color-navy;
+   padding: 15px 60px;
+   font-size: 0.9em;
+   font-weight: 500;
+ }
+ 
+ header {
+   top: 0;
+   border-bottom: 2px solid rgba($color-teal, 0.3);
+ }
+ 
+ footer {
+   bottom: 0;
+   border-top: 2px solid rgba($color-teal, 0.3);
+ }
+ 
+ // Dark theme
+ section.invert {
+   background: linear-gradient(135deg, $color-dark, color.adjust($color-navy, $lightness: -10%));
+   color: $color-sand;
+ 
+   &::before {
+     background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="%23F2DDB6" fill-opacity="0.05" width="50" height="50" x="0" y="0" /><rect fill="%23F2DDB6" fill-opacity="0.05" width="50" height="50" x="50" y="50" /></svg>');
+   }
+ 
+   h1, h2, h3, h4, h5, h6 {
+     @include gradient-text($color-teal, $color-sand);
+   }
+ 
+   a {
+     color: $color-teal;
+     border-bottom-color: $color-burgundy;
+ 
+     &:hover {
+       background-color: rgba($color-burgundy, 0.2);
+       color: $color-sand;
+     }
+   }
+ 
+   code {
+     background: rgba($color-burgundy, 0.3);
+     color: $color-sand;
+   }
+ 
+   pre {
+     background: linear-gradient(45deg, color.adjust($color-dark, $lightness: 10%), color.adjust($color-navy, $lightness: 10%));
+ 
+     code {
+       color: $color-sand;
+     }
+   }
+ 
+   blockquote {
+     border-left-color: $color-teal;
+     background: linear-gradient(90deg, rgba($color-burgundy, 0.2), rgba($color-navy, 0.2));
+   }
+ 
+   table {
+     th {
+       background: linear-gradient(45deg, color.adjust($color-burgundy, $lightness: -20%), color.adjust($color-navy, $lightness: -20%));
+       color: $color-sand;
+     }
+ 
+     tr:nth-child(even) {
+       background-color: rgba($color-dark, 0.3);
+     }
+ 
+     tr:hover {
+       background-color: rgba($color-teal, 0.1);
+     }
+   }
+ 
+   header,
+   footer {
+     color: $color-sand;
+     border-color: rgba($color-teal, 0.3);
+   }
+ }
